@@ -23,7 +23,8 @@ app.use(cookieParser());
 // CORS configuration for deployment
 const allowedOrigins = [
   'https://blog-app-final-git-main-anirudh-dixits-projects.vercel.app', // Make sure to use your correct frontend URLs
-  'https://blog-app-final-five.vercel.app'
+  'https://blog-app-final-five.vercel.app',
+  'blog-app-final-ks0rik0vw-anirudh-dixits-projects.vercel.app'
 ];
 
 app.use(
