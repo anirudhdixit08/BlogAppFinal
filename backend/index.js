@@ -22,8 +22,27 @@ app.use(cookieParser());
 
 // CORS configuration for deployment
 const allowedOrigins = [
+  'https://blog-app-final-git-main-anirudh-dixits-projects.vercel.app', // Make sure to use your correct frontend URLs
   'https://blog-app-final-five.vercel.app'
 ];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        console.log('CORS blocked origin:', origin);
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // <-- ADD THIS LINE
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // app.use(
 //   cors({
