@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 // CORS configuration for deployment
 const allowedOrigins = [
-  process.env.FRONTEND_URL,
+  'https://blog-app-final-five.vercel.app'
 ];
 
 app.use(
