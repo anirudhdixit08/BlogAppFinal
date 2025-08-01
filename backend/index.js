@@ -15,7 +15,6 @@ const app = express();
 dotenv.config();
 
 const port = process.env.PORT;
-const MONOGO_URL = process.env.MONOG_URI;
 
 //middleware
 app.use(express.json());

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { useAuth } from "../context/AuthProvider"; // ✅ use context
+import { useAuth } from "../context/AuthProvider"; 
 import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../utils.js";
 
@@ -12,7 +12,7 @@ function CreateBlog() {
   const [blogImage, setBlogImage] = useState("");
   const [blogImagePreview, setBlogImagePreview] = useState("");
 
-  const { fetchBlogs } = useAuth(); // ✅ get blog refresh function
+  const { fetchBlogs } = useAuth(); 
 
   const changePhotoHandler = (e) => {
     const file = e.target.files[0];
@@ -58,14 +58,14 @@ function CreateBlog() {
       );
       toast.success(data.message || "Blog posted successfully");
 
-      // ✅ Clear form
+
       setTitle("");
       setCategory("");
       setAbout("");
       setBlogImage("");
       setBlogImagePreview("");
 
-      // ✅ Refresh blogs list in context
+
       fetchBlogs();
     } catch (error) {
       console.log(error);

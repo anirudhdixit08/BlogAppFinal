@@ -24,7 +24,7 @@ const Footer = () => {
                   <FaTwitter className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors duration-300">
-                  <FaInstagram className="h-5 w-5" />
+                  <FaGithub className="h-5 w-5" />
                 </a>
                 <a href="https://www.linkedin.com/in/anirudh-dixit-49750328a/" className="text-gray-500 hover:text-blue-500 transition-colors duration-300">
                   <FaLinkedin className="h-5 w-5" />
